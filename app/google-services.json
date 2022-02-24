@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "595834260247",
+    "project_id": "demo6-96860",
+    "storage_bucket": "demo6-96860.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595834260247:android:de61ce3886f58b761a4552",
+        "android_client_info": {
+          "package_name": "com.example.instacompose"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "595834260247-tj7bsclq1665383t9onopifi4c4jccb5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-_MsO3vrYNIW_Sq8qnSvMmlnTXjLv78o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "595834260247-tj7bsclq1665383t9onopifi4c4jccb5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
