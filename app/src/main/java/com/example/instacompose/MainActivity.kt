@@ -19,6 +19,8 @@ import com.example.instacompose.presentation.authentication.AuthenticationViewMo
 import com.example.instacompose.presentation.authentication.LoginScreen
 import com.example.instacompose.presentation.authentication.SignUpScreen
 import com.example.instacompose.presentation.main.FeedScreen
+import com.example.instacompose.presentation.main.ProfileScreen
+import com.example.instacompose.presentation.main.SearchScreen
 import com.example.instacompose.ui.theme.InstaComposeTheme
 import com.example.instacompose.util.Screens
 import dagger.hilt.android.AndroidEntryPoint
@@ -50,19 +52,27 @@ fun instaComposeApp(
 ) {
     NavHost(navController = navController, startDestination = Screens.SplashScreen.route) {
         composable(route = Screens.LoginScreen.route) {
-            LoginScreen(navController = navController,viewModel = authenticationViewModel)
+            LoginScreen(navController = navController, viewModel = authenticationViewModel)
+        }
+
+        composable(route = Screens.SignUpScreen.route) {
+            SignUpScreen(navController = navController, viewModel = authenticationViewModel)
         }
 
         composable(route = Screens.SplashScreen.route) {
-            SignUpScreen(navController = navController,viewModel = authenticationViewModel)
+            SplashScreen(navController = navController, authViewModel = authenticationViewModel)
         }
 
-        composable(route = Screens.SplashScreen.route) {
-            SplashScreen(navController = navController,authViewModel = authenticationViewModel)
+        composable(route = Screens.FeedsScreen.route) {
+            FeedScreen(navController = navController)
         }
 
-        composable(route = Screens.LoginScreen.route) {
-            FeedScreen()
+        composable(route = Screens.SearchScreen.route) {
+            SearchScreen(navController = navController)
         }
+        composable(route = Screens.ProfileScreen.route) {
+            ProfileScreen(navController = navController)
+        }
+
     }
 }
