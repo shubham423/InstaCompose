@@ -115,18 +115,18 @@ fun SignUpScreen(navController: NavController, viewModel: AuthenticationViewMode
                     }
 
                 }
-
-                Text(
-                    text = "Already a user? Sign In",
-                    color = Color.Blue,
-                    modifier = Modifier.padding(8.dp)
-                        .clickable {
-                            navController.navigate(route = Screens.SignUpScreen.route){
-                                launchSingleTop=true
-                            }
-                        }
-                )
             }
+
+            Text(
+                text = "Already a user? Sign In",
+                color = Color.Blue,
+                modifier = Modifier.padding(8.dp)
+                    .clickable {
+                        navController.navigate(route = Screens.SignUpScreen.route){
+                            launchSingleTop=true
+                        }
+                    }
+            )
         }
     }
 
