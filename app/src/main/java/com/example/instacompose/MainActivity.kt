@@ -18,9 +18,12 @@ import com.example.instacompose.presentation.SplashScreen
 import com.example.instacompose.presentation.authentication.AuthenticationViewModel
 import com.example.instacompose.presentation.authentication.LoginScreen
 import com.example.instacompose.presentation.authentication.SignUpScreen
+import com.example.instacompose.presentation.main.FeedScreen
 import com.example.instacompose.ui.theme.InstaComposeTheme
 import com.example.instacompose.util.Screens
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,11 +50,11 @@ fun instaComposeApp(
 ) {
     NavHost(navController = navController, startDestination = Screens.SplashScreen.route) {
         composable(route = Screens.LoginScreen.route) {
-            LoginScreen()
+            LoginScreen(navController = navController,viewModel = authenticationViewModel)
         }
 
         composable(route = Screens.SplashScreen.route) {
-            SignUpScreen()
+            SignUpScreen(navController = navController,viewModel = authenticationViewModel)
         }
 
         composable(route = Screens.SplashScreen.route) {
@@ -59,7 +62,7 @@ fun instaComposeApp(
         }
 
         composable(route = Screens.LoginScreen.route) {
-            LoginScreen()
+            FeedScreen()
         }
     }
 }
